@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model List<image_upload.Models.Imageclass>
+
+    <table class="table">
+        <tr>
+            <th>Nmae</th>
+            <th>Image</th>
+        </tr>
+        @foreach(var item in Model)
+    {
+        <tr>
+            <td>@item.ImageName</td>
+            <td><img src="@item.ImagePath" height="100px;" width="100px;" /></td>
+        </tr>
+    }
+</table>

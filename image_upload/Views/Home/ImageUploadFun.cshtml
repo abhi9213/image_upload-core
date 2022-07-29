@@ -1,0 +1,33 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+@model image_upload.ViewModal.ImageViewModal
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-3">
+
+            <form method="post" asp-action="ImageUploadfun" enctype="multipart/form-data">
+            <div class="form-group">
+                <label asp-for="ImageName"></label>
+<input asp-for="ImageName" class="form-control" />
+<span asp-validation-for="ImageName" class="text-danger"></span>
+            </div> 
+            
+            <div class="form-group">
+                <label asp-for="Imagepath"></label>
+<input asp-for="Imagepath" type="file" class="form-control" />
+<span asp-validation-for="Imagepath" class="text-danger"></span>
+            </div> 
+
+            <div class="form-group">
+                <button type="submit" class=" btn btn-group-sm btn-primary">Upload</button>
+            </div> 
+            </form>
+        </div>
+    </div>
+</div>
